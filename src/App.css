@@ -1,0 +1,56 @@
+
+.main
+{
+  display: flex;
+}
+.contents
+{
+  width:100%
+}
+.Slide
+{
+  height: 610px;
+}
+
+.card
+{
+  margin: 20px 30px;
+  width: 40%;
+
+}
+.tag
+{
+ 
+  margin: 5px;
+
+  
+}
+.like
+{
+  margin-top: 20px;
+ 
+}
+.card-title
+{
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.delete
+{
+ height: 25px;
+ width: 35px;
+
+}
+
+.createPost
+{
+  margin: 20px 40px;
+
+}
+.postbtn
+{
+  width: 75px;
+  min-height: 40px;
+  margin-top: 20px;
+}
