@@ -11,14 +11,30 @@ function Forms() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newPost = {
-      title: titleRef.current.value,
-      body: contentRef.current.value,
-      id: useridRef.current.value,
-      reactions: 0,
-      tags: tagsRef.current.value.split(" "),
-    };
-    addpost(newPost);
+    
+    // const newPost = {
+    //   title: titleRef.current.value,
+    //   body: contentRef.current.value,
+    //   id: useridRef.current.value,
+    //   reactions: 0,
+    //   tags: tagsRef.current.value.split(" "),
+    // };
+
+    fetch('https://dummyjson.com/posts/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: titleRef.current.value,
+        body: contentRef.current.value,
+        userId: useridRef.current.value,
+        reactions: 0,
+        tags: tagsRef.current.value.split(" "),
+      })
+    })
+    .then(res => res.json())
+    .then(newPost=> addpost(newPost));
+
+  
     
  
     titleRef.current.value = "";

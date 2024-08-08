@@ -9,7 +9,7 @@ import { useState } from 'react';
 import PostListProvider from "./store/Post-list-store";
 function App() {
 
-  const[currstate,newstate]=useState("post");
+  const[currstate,newstate]=useState("Home");
 
   const change=(word)=>
   {
